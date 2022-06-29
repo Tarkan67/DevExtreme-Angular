@@ -1,12 +1,14 @@
 {
-  "items": [],
-  "baseTheme": "material.orange.dark",
-  "assetsBasePath": "../../../node_modules/devextreme/dist/css/",
-  "outputColorScheme": "additional",
+  "items": [
+    {
+      "key": "$base-accent",
+      "value": "rgba(238, 212, 132, 1)"
+    }
+  ],
+  "baseTheme": "material.blue.dark.compact",
+  "outputColorScheme": "color-swatch-costum",
   "makeSwatch": true,
-  "base": true,
-  "widgets": [
-    "treeview",
-    "navbar"
-  ]
+  "widgets": [],
+  "removeExternalResources": false,
+  "assetsBasePath": "../../../node_modules/devextreme/dist/css/"
 }

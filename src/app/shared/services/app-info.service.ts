@@ -5,7 +5,7 @@ export class AppInfoService {
   constructor() {}
 
   public get title() {
-    return 'Appo Mappo2';
+    return 'MEDLOG';
   }
 
   public get currentYear() {
