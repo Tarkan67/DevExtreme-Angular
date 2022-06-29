@@ -5,9 +5,39 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
-import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
+import {DxDataGridModule, DxFormModule, DxMapModule} from 'devextreme-angular';
+import { ViewNameComponent } from './pages/view-name/view-name.component';
+import { TrackingComponent } from './pages/tracking/tracking.component';
+import { IhreComponent } from './pages/ihre/ihre.component';
+import { GestellungenComponent } from './pages/gestellungen/gestellungen.component';
+import { FehlendeComponent } from './pages/fehlende/fehlende.component';
 
 const routes: Routes = [
+  {
+    path: 'pages/fehlende',
+    component: FehlendeComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'pages/gestellungen',
+    component: GestellungenComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'pages/ihre',
+    component: IhreComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'pages/tracking',
+    component: TrackingComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'pages/view-name',
+    component: ViewNameComponent,
+    canActivate: [ AuthGuardService ]
+  },
   {
     path: 'tasks',
     component: TasksComponent,
@@ -50,13 +80,18 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true }), DxDataGridModule, DxFormModule],
+    imports: [RouterModule.forRoot(routes, {useHash: true}), DxDataGridModule, DxFormModule, DxMapModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [
     HomeComponent,
     ProfileComponent,
-    TasksComponent
+    TasksComponent,
+    ViewNameComponent,
+    TrackingComponent,
+    IhreComponent,
+    GestellungenComponent,
+    FehlendeComponent
   ]
 })
 export class AppRoutingModule { }

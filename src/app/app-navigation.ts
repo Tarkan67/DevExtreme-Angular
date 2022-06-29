@@ -17,5 +17,30 @@ export const navigation = [
         path: '/tasks'
       }
     ]
+  },
+  {
+    text: 'View Name',
+    path: '/pages/view-name',
+    icon: 'folder'
+  },
+  {
+    text: 'Tracking',
+    path: '/pages/tracking',
+    icon: 'folder'
+  },
+  {
+    text: 'Ihre',
+    path: '/pages/ihre',
+    icon: 'folder'
+  },
+  {
+    text: 'Gestellungen',
+    path: '/pages/gestellungen',
+    icon: 'folder'
+  },
+  {
+    text: 'Fehlende',
+    path: '/pages/fehlende',
+    icon: 'folder'
   }
 ];
